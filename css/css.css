@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 12pt;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    margin-top: 15vh;
+    margin-bottom: 2em;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 1.3rem;
+}
+
+div.links{
+    align-self: flex-start;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding-top: 1em;
+    letter-spacing: 1px;
+}
+a{
+    text-decoration: none;
+}
