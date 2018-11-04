@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+}
+a {
+    text-decoration: none;
+}
+
+/* navigation styling */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15em;
+    padding-right: 15em;
+}
+nav a {
+    width: 8em;
+    margin-top: 1em;
+}
+nav a h1 {
+    color: hsl(203, 6%, 13%);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: .9em;
+    cursor: pointer;
+}
+a.droplinks {
+    width: 100%;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+/* hamburger menu styling */
+button.dropbtn{
+    margin-top: 1em;
+    width: 4em;
+    height: 4em;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+div.hamburger1 , div.hamburger2, div.hamburger3{
+    margin: auto;
+    width: 20px;
+    height: 5px;
+    background-color: hsl(203, 6%, 13%);
+    position: relative;
+    transition: .4s ease;
+    z-index: 100;
+}
+div.hamburger1 {
+    transform: translate(0, 1.9em);
+    width: 45px;
+}
+div.hamburger3{
+    transform: translate(0, -1.9em);
+    width: 45px;
+}
+/* hamburger menu clicked styling */
+.change div.hamburger2 {
+    opacity: 0;
+    width: 0em;
+    transform: translate(-1.5em, 0em);
+}
+.change div.hamburger3 {
+    transform: translate(0em, -.4em) rotate(45deg);
+    
+}
+.change div.hamburger1 {
+    transform: translate(0em, .4em) rotate(-45deg);
+}
+
+/* dropdown menu styling*/
+div.dropdown {
+    display: none;
+}
+.change div.dropdown {
+    display: block;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0em;
+    left: 0em;
+    opacity: 1;
+    transition: .6s ease;
+    background-color: hsla(0, 0%, 100%, 0.95);
+}
+img.avatar {
+    display: block;
+    position: fixed;
+    top: -5em;
+    left: 10em;
+    transition: all 1s ease;
+    z-index: 100;
+}
+.change img.avatar {
+    top: 0em;
+    transition: all 1s ease;
+    transition-delay: .5s;
+}
+div.dropdown a h1 {
+    font-size: 15rem;
+    transition: all .6s ease;
+    opacity: .5;
+    cursor: pointer;
+}
+div.dropdown a h1:hover {
+    opacity: 1;
+}
+div.content {
+    height: 100vh;
+    width: 100%;
+}
+
+/* resizing nav for ipad */
+@media only screen and (max-width: 1024px) {
+    nav {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    * {
+        font-size: 6px;
+    }
+    nav {
+        padding-top: 1em;
+        padding-right: 2em;
+        padding-left: 2em;
+        position: initial;
+    }
+    nav a h1 {
+        font-size: 3rem;
+    }
+    button.dropbtn {
+        padding-right: 6em;
+    }
+    div.hamburger1 {
+        transform: translate(-2em, 3rem);
+        width: 35px;
+    }
+    div.hamburger2 {
+        transform: translate(-.8em, 0);
+    }
+    div.hamburger3{
+        transform: translate(-2em, -3rem);
+        width: 35px;
+    }
+    img.avatar {
+        top: -8em;
+    }
+    /* hamburger menu clicked styling */
+
+    .change div.hamburger3 {
+        transform: translate(-1em, -.85em) rotate(45deg);
+        
+    }
+    .change div.hamburger1 {
+        transform: translate(-1em, .85em) rotate(-45deg);
+    }
+    a.droplinks h1 {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+}
