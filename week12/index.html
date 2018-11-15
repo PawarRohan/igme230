@@ -112,13 +112,36 @@
         const numRows = 20; // specify pixel grid rows
         const cellSize = 25; // specify dimension of cell square in px
         const numCells = numCols * numRows; // calculate total number of cells
+        const gridHeight = (numRows * (cellSize +1)) - 1;
+        const gridWidth = (numCols * (cellSize +1)) -1;
         
+        const pixelGrid = document.querySelector("#pixelGrid");
 
-        
-        pixelGrid.style.grid-template-rows = numRows;
-        pixelGrid.style.grid-template-columns = numCols;
+        let wrapper = document.querySelector("#wrapper");
+        wrapper.style.gridTemplateColumns = `1fr ${gridWidth}px 250px 1fr`;
 
-         $("#pixelGrid").append('<span class="cell"></span>');
+        for(let cells = 0; cells < numCells; cells++){
+            $("#pixelGrid").append('<span class="cell"></span>');
+        }
+
+        pixelGrid.style.gridTemplateRows = `repeat(${numRows}, ${cellSize}px)`;
+        pixelGrid.style.gridTemplateColumns = `repeat(${numCols}, ${cellSize}px)`;
+
+        pixelGrid.style.height = `${gridHeight}px`;
+
+        let color = $("#colorChooser").val();
+        console.log(color);
+
+        $("#colorChooser").change(function () { 
+        color = $(this).val();  
+        console.log(color);  
+});
+
+$("span.cell").click(function () { 
+    $(this).css("background-color", color);
+});
+
+
 
     </script>
 </body>
