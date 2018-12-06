@@ -78,6 +78,9 @@ nav {
 article {
     grid-area: article;
 }
+aside {
+    grid-area: aside;
+}
 footer{
     grid-area: footer;
 }
