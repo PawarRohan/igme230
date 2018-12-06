@@ -1,0 +1,127 @@
+/*********************************
+General Formatting (Do Not Change)
+*********************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: #86af49;
+}
+
+nav,
+aside,
+article {
+    padding: .5rem;
+}
+
+nav, aside {
+    background-color: #b5e7a0;
+}
+
+
+/**************
+Your Formatting
+***************/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuitem {
+    background: white;
+    margin: 0;
+    border-top: 1px;
+    border-color: #86af49;
+}
+.submenu {
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+.submenu li {
+    padding: .25rem;
+    background: lightgray;
+    display: block;
+}
+
+
+/* *********************************************
+assign spaces
+********************************************* */
+header{
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+article {
+    grid-area: article;
+}
+footer{
+    grid-area: footer;
+}
+
+/* 
+*****************************************************
+mobile grid 
+***************************************************** 
+*/
+
+#wrapper{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 
+        "header"
+        "nav"
+        "article"
+        "footer"
+    ;
+}
+
+@media only screen and (min-width: 500px){
+
+    #wrapper{
+        display: grid;
+        width: 90vw;
+        max-width: 1200px;
+        min-height: 100vh;
+
+        grid-template-rows: 4rem 1fr 3rem;
+        grid-template-columns: 1fr 2fr 200px;
+
+        grid-template-areas: 
+            "header header header"
+            "aside article nav"
+            "footer footer footer"
+            ;
+
+    }   
+
+}
+
