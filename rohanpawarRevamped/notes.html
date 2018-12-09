@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rohan Pawar</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/css-resume.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,500,700" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><h1>ROHAN PAWAR</h1></a>
+        <button  class="dropbtn" onclick="dropdown(this)" alt="Menu">
+            <div class="hamburger1"></div>
+            <div class="hamburger2"></div>
+            <div class="hamburger3"></div>
+            <img class="avatar" src="../rohanpawar/media/avatar.png">
+            <div class="dropdown">
+                <a class="droplinks" href="index.html"><h1>home</h1></a>
+                <a class="droplinks" href="contact_me.html"><h1>about me</h1></a>
+                <a class="droplinks" href="resume.html"><h1>resume</h1></a>
+                <a class="droplinks" href="notes.html"><h1>notes</h1></a>
+            </div>
+        </button>
+    </nav>
+    <div class="content">
+        <div>
+            <h2>Sources</h2>
+            <a src="font.google.com"><p>Font family: Oswald. A bold, condensed sans serif. </p></a>
+        </div>
+        <div>
+            <h2>Design challenges</h2>
+            <p>I used a clear, clean design. I wanted to only display a few pieces of information and let the projects themselves be the only defining color in the website. That required strong typography, which is why I chose to have such bold, large project headlines. </p>
+        </div>
+        <div>
+            <h2>Above the call</h2>
+            <p>Instead of finding a bit of javascript online to figure out how to make a dropdown menu, I tried to achieve the same effect from scratch. First, I tried to use :focus or :active tags in CSS to trigger the changes I wanted. Then, I used javascript to get a working dropdown menu. It was a challenge, but gratifying in the end. </p>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script type="text/javascript">
+    function dropdown(X) {
+        X.classList.toggle("change");
+    }
+</script>

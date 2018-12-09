@@ -1,0 +1,81 @@
+div.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.me {
+    background-image: url('../media/myself.jpg');
+    background-size: cover;
+    width: 30em;
+    height: 45em;
+    margin-top: 6em;
+}
+div.bio {
+    width: 40em;
+    margin-right: 10em;
+}
+h1 {
+    font-size: 10rem;
+    font-weight: 700;
+}
+p{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+h2 {
+    margin-top: 1rem;
+    font-size: 4rem;
+}
+
+/* resizing nav for tablet */
+@media only screen and (max-width: 1024px) {
+    div.content {
+        flex-direction: column;
+        margin-bottom: 20em;
+    }
+    div.bio {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    div.content {
+        height: auto;
+        margin-bottom: 8em;
+    }
+    div.bio {
+        width: 100%;
+        height: auto;
+        margin-top: 30em;
+    }
+    h1 {
+        width: 90%;
+        margin: auto;
+        font-size: 15rem;
+        font-weight: 700;
+    }
+    div.dropdown a h1 {
+        width: 100%;
+    }
+    p{ 
+        width: 90%;
+        margin: auto;
+        font-size: 3rem;
+        font-weight: 300;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    h2 {
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        font-size: 4rem;
+    }
+    div.me {
+        width: 60em;
+        height: 90em;
+        margin-top: 20em;
+    }
+}
