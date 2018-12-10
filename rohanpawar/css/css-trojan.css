@@ -39,10 +39,14 @@ div.pic {
     height: 40em;
 }
 div.pic1 {
-    background-image: url(../media/metal-condom.jpg)
+    background-image: url(../media/metal-condom.jpg);
 }
 div.pic2 {
-    background-image: url(../media/water-condom.jpg)
+    background-image: url(../media/water-condom.jpg);
+}
+div.pic3 {
+    background-image: url(../media/gotpillspostermockup.jpg);
+    height: 90em;
 }
 @media only screen and (max-width: 480px) {
     .title {
