@@ -97,6 +97,7 @@ div.dropdown {
     opacity: 1;
     transition: .6s ease;
     background-color: hsla(0, 0%, 100%, 0.95);
+    z-index: 5;
 }
 img.avatar {
     display: block;
