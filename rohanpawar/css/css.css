@@ -11,6 +11,7 @@ a {
 
 /* navigation styling */
 nav {
+    height: 10vh;
     position: sticky;
     top: 0;
     display: flex;
@@ -29,6 +30,7 @@ nav a h1 {
     font-size: 2rem;
     line-height: .9em;
     cursor: pointer;
+    text-align: center;
 }
 a.droplinks {
     width: 100%;
@@ -41,8 +43,8 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 /* hamburger menu styling */
-button.dropbtn{
-    margin-top: 1em;
+div.dropbtn{
+    margin-top: 3em;
     width: 4em;
     height: 4em;
     background: none;
@@ -59,11 +61,11 @@ div.hamburger1 , div.hamburger2, div.hamburger3{
     z-index: 100;
 }
 div.hamburger1 {
-    transform: translate(0, 1.9em);
+    transform: translate(0, 1.6em);
     width: 45px;
 }
 div.hamburger3{
-    transform: translate(0, -1.9em);
+    transform: translate(0, -1.6em);
     width: 45px;
 }
 /* hamburger menu clicked styling */
@@ -89,7 +91,6 @@ div.dropdown {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100vh;
     width: 100vw;
     top: 0em;
@@ -97,7 +98,7 @@ div.dropdown {
     opacity: 1;
     transition: .6s ease;
     background-color: hsla(0, 0%, 100%, 0.95);
-    z-index: 5;
+    z-index: 25;
 }
 img.avatar {
     display: block;

@@ -33,6 +33,47 @@ h2 {
     margin-top: 2rem;
 }
 
+.iconBox {
+    margin-top: 15em;
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+.icon{
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+}
+.icon h2 {
+    display: none;
+}
+.icon img {
+    display: none;
+}
+.icon:hover h2{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 2em;
+    z-index: 800;
+}
+.icon:hover img {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.i1 {
+    background-image: url("../media/people-icon-01.png");
+}
+.i2 {
+    background-image: url("../media/signage-01.png");
+}
+.i3 {
+    background-image: url("../media/boxes-icon-01.png")
+}
+
 @media only screen and (max-width: 480px) {
     .title {
         padding-left: 1em;

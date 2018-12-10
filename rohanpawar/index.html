@@ -12,7 +12,7 @@
 <body>
     <nav>
         <a href="index.html"><h1>ROHAN PAWAR</h1></a>
-        <button  class="dropbtn" onclick="dropdown(this)">
+        <div  class="dropbtn" onclick="dropdown(this)">
             <div class="hamburger1"></div>
             <div class="hamburger2"></div>
             <div class="hamburger3"></div>
@@ -23,13 +23,34 @@
                 <a class="droplinks" href="resume.html"><h1>resume</h1></a>
                 <a class="droplinks" href="notes.html"><h1>notes</h1></a>
             </div>
-        </button>
+        </div>
     </nav>
     <div class="content">
         <div class="projects">
-            <a class="projImg proj1" href="../rohanpawar/taw.html" aria-label="Thought at Work"></a>
-            <a class="projImg proj2" href="../rohanpawar/robot-oly.html" aria-label="Robot Olympiad"></a>
-            <a class="projImg proj3" href="../rohanpawar/trojan.html" aria-label="Trojan Condoms"></a>
+            <a class="projImg proj1" href="../rohanpawar/taw.html" aria-label="Thought at Work">
+                <div class="hovering hoverLeft">
+                    <h2>Thought at Work</h2>
+                    <p>A title sequence showing the creation of an idea into a reality through fun, playful motion graphic</p>                 
+                </div></a>            
+            <a class="projImg proj2" href="../rohanpawar/robot-oly.html" aria-label="Robot Olympiad">
+                <div class="hovering hoverRight">
+                    <h2>Robot Olympiad</h2>
+                    <p>An animated bumper advertising an upcoming event for the Robot Olympiad in Costa Rica.</p>                 
+                </div>
+            </a>
+            <a class="projImg proj4" href="../rohanpawar/dontflush.html" aria-label="Trojan Condoms">
+                <div class="hovering hoverLeft">
+                    <h2>Trojan Condoms advertisement</h2>
+                    <p>An ad campaign for Trojan Condoms.</p>                 
+                </div>
+            </a>
+            <a class="projImg proj3" href="../rohanpawar/trojan.html" aria-label="Trojan Condoms">
+                <div class="hovering hoverRight">
+                    <h2>Trojan Condoms advertisement</h2>
+                    <p>An ad campaign for Trojan Condoms.</p>                 
+                </div>
+            </a>
+            
         </div>
     </div>
 </body>
@@ -38,7 +59,5 @@
     function dropdown(X) {
         X.classList.toggle("change");
     }
-    function hover(X) {
-        x.classList.toggle()
-    }
+
 </script>

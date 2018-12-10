@@ -1,22 +1,44 @@
 
+
+
+
 div.content{
     display: flex;
     justify-content: center;
     align-content: center;
+    padding-top: 15vh;
 }
 div.spacer {
     display: none;
 }
 
+/* assigning grid areas */
+.proj1 {
+    grid-area: "proj1";
+}
+.proj2 {
+    grid-area: "proj2";
+}
+.proj3 {
+    grid-area: "proj3";
+}
+.proj4 {
+    grid-area: "proj4";
+}
+
+
 div.projects{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    width: 100%;
+    display: grid;
+
     height: 100%;
-    padding-left: 15em;
-    padding-right: 15em;
+    min-width: 900px;
+    max-height: 1200px;
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 5rem;
+
 }
 a {
     cursor: pointer;
@@ -29,12 +51,15 @@ a.proj2 {
 }
 a.proj3 {
     background-image: url('../media/trojan-condoms-card.jpg');
-
+}
+a.proj4 {
+    background-image: url('../media/dont-flush-card.jpg');
 }
 a.projImg:hover {
     width: 330px;
     height: 330px;
     box-shadow: 0px 10px 30px #888888;
+    z-index: 10;
 }
 a.projImg{
     width: 300px;
@@ -42,7 +67,49 @@ a.projImg{
     background-size: cover;
     transition: all .4s ease;
     box-shadow: 0px 3px 5px #888888;
+    margin: auto;
 }
+
+/* project hover state styling */
+.hovering {
+    visibility: hidden;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: hsla(0, 0%, 100%, 0.95);
+}
+.hoverLeft{
+    left: 50vw;
+}
+.hoverRight{
+    right: 50vw;
+}
+.hoverRight h2{
+    margin-left: 5vw;
+}
+.hoverRight p{
+    margin-left: 5vw;
+}
+.hovering h2 {
+    margin-top: 25vh;
+    font-size: 4rem;
+    color: #010101;
+}
+.hovering p {
+    width: 80%;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #010101;
+}
+a:hover div.hovering{
+    visibility: visible;
+}
+
+
+
+
 /* resizing nav for tablet */
 @media only screen and (max-width: 1024px) {
     div.projects {
@@ -53,8 +120,8 @@ a.projImg{
 
 @media only screen and (max-width: 480px) {
     div.projects{
-        height: 150em;
-        margin-bottom: 20em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
     }
     a.projImg {
         width: 40em;
