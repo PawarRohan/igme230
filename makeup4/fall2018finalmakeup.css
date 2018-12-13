@@ -1,0 +1,161 @@
+/*****************
+General Formatting
+******************/
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section, header, footer {
+    padding: .5rem;
+}
+
+.menu {
+    width: 100%;
+    padding: .5rem;
+    background-color: #aaa;
+    margin: 1px;
+}
+
+.submenu {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    background-color: #eee;
+    padding-left: .5rem;
+}
+
+/**************
+Your Formatting
+***************/
+
+/* defining grid areas */
+
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+#story {
+    grid-area: story;
+}
+#source{
+    grid-area: source;
+}
+#extracredit {
+    grid-area: extracredit;
+}
+footer {
+    grid-area: footer;
+}
+
+/* mobile grid */
+
+#pagegrid {
+    display: grid;
+    width: 100vw;
+    height: 100%;
+
+    grid-template-rows: 80px repeat(4, 1fr) 30px;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 
+        "header"
+        "story"
+        "source"
+        "extracredit"
+        "nav"
+        "footer" ;
+}
+
+
+/* desktop grid */
+
+@media only screen and (min-width: 500px) {
+    #pagegrid {
+        display: grid;
+        width: 95vw;
+        max-width: 1100px;
+        min-height: 100vh;
+
+        grid-template-rows: 80px 1fr 1fr 30px;
+        grid-template-columns: 200px 2fr 1fr;
+
+        grid-template-areas: 
+            "header header header"
+            "nav story source"
+            "nav story extracredit"
+            "footer footer footer" ;
+    }
+}
+
+/* colors and styling */
+
+header {
+    background-color: lightblue;
+}
+
+nav {
+    background-color: lavenderblush;
+}
+
+#story {
+    background-color: lightcyan;
+}
+#source {
+    background-color: lightsalmon;
+}
+#extracredit {
+    background-color: white;
+}
+footer {
+    background-color: lightblue;
+}
+#currentcount {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* formatting */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#extracredit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li:hover {
+    background-color: lightpink;
+    color: magenta;
+    cursor: pointer;
+}
+.submenu {
+    display: none;
+}
+nav div:hover {
+    cursor: pointer;
+}
